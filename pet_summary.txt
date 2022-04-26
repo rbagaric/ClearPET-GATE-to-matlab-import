@@ -1,0 +1,4 @@
+# NumberOfHits = 2342962
+# NumberOfRun = 61
+# NumberOfEvents = 2995584
+# Coincidences = 54350
