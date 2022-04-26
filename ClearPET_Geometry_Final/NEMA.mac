@@ -1,0 +1,61 @@
+
+
+
+
+
+#     NEMA  P H A N T O M   G E O M E T R Y
+/gate/world/daughters/name           NEMA
+/gate/world/daughters/insert         box
+/gate/NEMA/placement/setTranslation  0.0 0.0 0.0 cm
+/gate/NEMA/geometry/setXLength       10. cm
+/gate/NEMA/geometry/setYLength       10. cm
+/gate/NEMA/geometry/setZLength       10. cm
+/gate/NEMA/setMaterial               Air
+/gate/NEMA/vis/forceWireframe
+/gate/NEMA/vis/setColor              gray
+
+
+
+
+
+# outershell plastic   
+/gate/NEMA/daughters/name                 outershell
+/gate/NEMA/daughters/insert               cylinder
+/gate/outershell/placement/setTranslation 0.0 0.0 0.0 cm
+/gate/outershell/geometry/setRmin         16.5 mm
+/gate/outershell/geometry/setRmax         16.75 mm
+/gate/outershell/geometry/setHeight       63 mm
+/gate/outershell/setMaterial              Plastic
+/gate/outershell/vis/forceWireframe
+/gate/outershell/vis/setColor             blue
+#
+
+# Hollow Space on left side 8 mm
+/gate/outershell/daughters/name           cyl8
+/gate/outershell/daughters/insert         cylinder
+/gate/cyl8/placement/setTranslation      0.0 10.0 20.0 mm
+/gate/cyl8/geometry/setRmax              4 mm
+/gate/cyl8/geometry/setRmin              0.0 mm
+/gate/cyl8/geometry/setHeight            15 mm
+/gate/cyl8/setMaterial                  Air
+/gate/cyl8/vis/forceWireframe    
+/gate/cyl8/vis/setColor                 yellow
+
+
+# Hollow Space on left side 8 mm
+/gate/outershell/daughters/name           cyl10
+/gate/outershell/daughters/insert         cylinder
+/gate/cyl10/placement/setTranslation      0.0 -10.0 20.0 mm
+/gate/cyl10/geometry/setRmax              5 mm
+/gate/cyl10/geometry/setRmin              0.0 mm
+/gate/cyl10/geometry/setHeight            15 mm
+/gate/cyl10/setMaterial                  Air
+/gate/cyl10/vis/forceWireframe    
+/gate/cyl10/vis/setColor                 red
+
+
+
+
+
+# Define the sensitive detector
+/gate/NEMA/attachPhantomSD
